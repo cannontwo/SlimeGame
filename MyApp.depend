@@ -1,0 +1,420 @@
+# depslib dependency file v1.0
+1353138126 source:c:\users\cannon\code\sdlprojects\myapp\capp.cpp
+	"CApp.h"
+
+1353137947 c:\users\cannon\code\sdlprojects\myapp\capp.h
+	<SDL.h>
+	"Define.h"
+	"CAppStateManager.h"
+	"CFPS.h"
+	"CEvent.h"
+	"CSurface.h"
+
+1353138082 source:c:\users\cannon\code\sdlprojects\myapp\capp_oncleanup.cpp
+	"CApp.h"
+
+1353138043 source:c:\users\cannon\code\sdlprojects\myapp\capp_onevent.cpp
+	"CApp.h"
+
+1353138032 source:c:\users\cannon\code\sdlprojects\myapp\capp_oninit.cpp
+	"CApp.h"
+
+1353437731 source:c:\users\cannon\code\sdlprojects\myapp\capp_onloop.cpp
+	"CApp.h"
+
+1353138072 source:c:\users\cannon\code\sdlprojects\myapp\capp_onrender.cpp
+	"CApp.h"
+
+1352684691 c:\users\cannon\code\sdlprojects\myapp\csurface.h
+	<SDL.h>
+	"SDL_image.h"
+
+1353141528 source:c:\users\cannon\code\sdlprojects\myapp\csurface.cpp
+	"CSurface.h"
+
+1352436317 c:\users\cannon\code\sdlprojects\myapp\cevent.h
+	<SDL.h>
+
+1352436379 source:c:\users\cannon\code\sdlprojects\myapp\cevent.cpp
+	"CEvent.h"
+
+1353303306 source:c:\users\cannon\code\sdlprojects\myapp\canimation.cpp
+	"CAnimation.h"
+
+1352599807 c:\users\cannon\code\sdlprojects\myapp\canimation.h
+	<SDL.h>
+
+1353526631 c:\users\cannon\code\sdlprojects\myapp\centity.h
+	<vector>
+	"CArea.h"
+	"CAnimation.h"
+	"CCamera.h"
+	"CFPS.h"
+	"CSurface.h"
+
+1353529593 source:c:\users\cannon\code\sdlprojects\myapp\centity.cpp
+	"CEntity.h"
+
+1353303422 c:\users\cannon\code\sdlprojects\myapp\define.h
+
+1352769422 c:\users\cannon\code\sdlprojects\myapp\carea.h
+	"CMap.h"
+
+1352769468 c:\users\cannon\code\sdlprojects\myapp\cmap.h
+	<SDL.h>
+	<vector>
+	"CTile.h"
+	"CSurface.h"
+
+1352603080 c:\users\cannon\code\sdlprojects\myapp\ctile.h
+	"Define.h"
+
+1352769967 c:\users\cannon\code\sdlprojects\myapp\ccamera.h
+	<SDL.h>
+	"Define.h"
+
+1352769436 source:c:\users\cannon\code\sdlprojects\myapp\carea.cpp
+	"CArea.h"
+
+1353175256 source:c:\users\cannon\code\sdlprojects\myapp\ccamera.cpp
+	"CCamera.h"
+
+1352769481 source:c:\users\cannon\code\sdlprojects\myapp\cmap.cpp
+	"CMap.h"
+
+1352603135 source:c:\users\cannon\code\sdlprojects\myapp\ctile.cpp
+	"CTile.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_platform.h
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_config_dreamcast.h
+	"SDL_platform.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_config_macos.h
+	"SDL_platform.h"
+	<MacTypes.h>
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_config_macosx.h
+	"SDL_platform.h"
+	<AvailabilityMacros.h>
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_config_symbian.h
+	"SDL_platform.h"
+	<stdarg.h>
+	<stddef.h>
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_config_win32.h
+	"SDL_platform.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_config_os2.h
+	"SDL_platform.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_config_minimal.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1352268436 c:\sdl\sdl-1.2.15\include\begin_code.h
+
+1352268436 c:\sdl\sdl-1.2.15\include\close_code.h
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_keysym.h
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1352268436 c:\sdl\sdl-1.2.15\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325814034 c:\sdl\sdl-1.2.15\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325814034 c:\sdl_image\sdl_image-1.2.12\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1353528646 c:\users\cannon\code\sdlprojects\myapp\cplayer.h
+	"CEntity.h"
+	"CBullet.h"
+
+1352769008 c:\users\cannon\code\sdlprojects\myapp\cfps.h
+	<SDL.h>
+
+1353536748 source:c:\users\cannon\code\sdlprojects\myapp\cplayer.cpp
+	"CPlayer.h"
+
+1352770041 source:c:\users\cannon\code\sdlprojects\myapp\cfps.cpp
+	"CFPS.h"
+
+1352770714 source:c:\users\cannon\code\sdlprojects\myapp\centitycol.cpp
+	"CEntity.h"
+
+1353544448 c:\users\cannon\code\sdlprojects\myapp\cappstatemanager.h
+	"CAppState.h"
+
+1353140241 c:\users\cannon\code\sdlprojects\myapp\cappstate.h
+	"CEvent.h"
+	"Define.h"
+
+1353137833 source:c:\users\cannon\code\sdlprojects\myapp\cappstate.cpp
+	"CAppState.h"
+
+1353544979 source:c:\users\cannon\code\sdlprojects\myapp\cappstategame.cpp
+	"CAppStateGame.h"
+
+1353546383 c:\users\cannon\code\sdlprojects\myapp\cappstategame.h
+	"CAppState.h"
+	"CArea.h"
+	"CCamera.h"
+	"CEntity.h"
+	"CSurface.h"
+	"CAppStateManager.h"
+	"CAppStateEnd.h"
+	"CPlayer.h"
+	"CEnemy.h"
+	"CAppStateMessage.h"
+
+1353186566 source:c:\users\cannon\code\sdlprojects\myapp\cappstateintro.cpp
+	"CAppStateIntro.h"
+	"CAppStateManager.h"
+
+1353137867 c:\users\cannon\code\sdlprojects\myapp\cappstateintro.h
+	"CAppState.h"
+	"CSurface.h"
+
+1353544780 source:c:\users\cannon\code\sdlprojects\myapp\cappstatemanager.cpp
+	"CAppStateManager.h"
+	"CAppStateMenu.h"
+	"CAppStateIntro.h"
+	"CAppStateGame.h"
+	"CAppStateEnd.h"
+
+1353180651 c:\users\cannon\code\sdlprojects\myapp\cappstatemenu.h
+	"CAppState.h"
+	"CSurface.h"
+
+1353186556 source:c:\users\cannon\code\sdlprojects\myapp\cappstatemenu.cpp
+	"CAppStateMenu.h"
+	"CAppStateManager.h"
+
+1353179835 c:\users\cannon\code\sdlprojects\myapp\clog.h
+	<fstream>
+
+1353179834 source:c:\users\cannon\code\sdlprojects\myapp\clog.cpp
+	"CLog.h"
+
+1353543872 source:c:\users\cannon\code\sdlprojects\myapp\cbullet.cpp
+	"CBullet.h"
+	<cmath>
+
+1353543848 c:\users\cannon\code\sdlprojects\myapp\cbullet.h
+	"CEntity.h"
+	"CVector.h"
+
+1353385528 c:\users\cannon\code\sdlprojects\myapp\cvector.h
+
+1353385577 source:c:\users\cannon\code\sdlprojects\myapp\cvector.cpp
+	"CVector.h"
+
+1353527361 c:\users\cannon\code\sdlprojects\myapp\cenemy.h
+	<vector>
+	"CEntity.h"
+	"CBullet.h"
+	"CPlayer.h"
+
+1353536872 source:c:\users\cannon\code\sdlprojects\myapp\cenemy.cpp
+	"CEnemy.h"
+
+1353516358 source:c:\users\cannon\code\sdlprojects\myapp\resources.rc
+
+1353545142 source:c:\users\cannon\code\sdlprojects\myapp\cappstateend.cpp
+	"CAppStateEnd.h"
+	"CAppStateManager.h"
+
+1353545136 c:\users\cannon\code\sdlprojects\myapp\cappstateend.h
+	"CAppState.h"
+	"CArea.h"
+	"CCamera.h"
+	"CEntity.h"
+	"CSurface.h"
+	"CAppStateManager.h"
+
+1353546337 c:\users\cannon\code\sdlprojects\myapp\cappstatemessage.h
+
