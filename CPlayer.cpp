@@ -4,6 +4,7 @@ CPlayer::CPlayer() {
     Health = 100;
     Type = ENTITY_TYPE_PLAYER;
     HitTimes = 0;
+    Dead = false;
 }
 
 bool CPlayer::OnLoad(char* File, int Width, int Height, int MaxFrames) {

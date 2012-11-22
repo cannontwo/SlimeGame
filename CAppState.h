@@ -3,6 +3,7 @@
 
 #include "CEvent.h"
 #include "Define.h"
+#include "CAppStateMessage.h"
 
 class CAppState : public CEvent {
     public:
@@ -16,6 +17,8 @@ class CAppState : public CEvent {
         virtual void OnLoop() = 0;
 
         virtual void OnRender(SDL_Surface* Surf_Display) = 0;
+
+        virtual void OnReceiveMessage(CAppStateMessage Message) = 0;
 };
 
 #endif

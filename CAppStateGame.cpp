@@ -5,6 +5,8 @@
 
 CAppStateGame CAppStateGame::Instance;
 
+std::vector<CAppStateMessage*>     CAppStateManager::MessageList;
+
 CAppStateGame::CAppStateGame() {
     FirstTime = true;
 }
@@ -95,18 +97,23 @@ void CAppStateGame::OnActivate() {
         return;
     }
 
-    if(Player.OnLoad("player.png", 64, 64, 1) == false) {
+    if(Player.OnLoad("./images/player.png", 64, 64, 1) == false) {
         return;
     }
 
-    if(Archer.OnLoad("archer.png",64,64,1) == false) {
+    if(Archer.OnLoad("./images/archer.png",64,64,1) == false) {
         return;
     }
     if (FirstTime) {
         Player.Y = (MAP_HEIGHT - 10) * TILE_SIZE;
         FirstTime = false;
     }
+
+    Player.X = 100;
+    Archer.X = 500;
+
     Archer.SetPlayer(Player);
+
 
     CEntity::EntityList.push_back(&Archer);
     CEntity::EntityList.push_back(&Player);
@@ -128,18 +135,6 @@ void CAppStateGame::OnDeactivate() {
 }
 
 void CAppStateGame::OnLoop() {
-    if (Player.Dead) {
-        CAppStateMessage<bool> WinMessage (false);
-        CAppStateManager::SendMessage(APPSTATE_END,WinMessage);
-        CAppStateManager::SetActiveAppState(APPSTATE_END);
-    }
-
-    if (Archer.Dead) {
-        CAppStateMessage<bool> WinMessage (true);
-        CAppStateManager::SendMessage(APPSTATE_END,WinMessage);
-        CAppStateManager::SetActiveAppState(APPSTATE_END);
-    }
-
     for(int i = 0;i < CEntity::EntityList.size();i++) {
         if(!CEntity::EntityList[i]) continue;
 
@@ -168,6 +163,17 @@ void CAppStateGame::OnLoop() {
 
     CEntityCol::EntityColList.clear();
 
+    if (Player.Dead) {
+        WinMessage.boolMessage = false;
+        CAppStateManager::SendMessage(APPSTATE_END,WinMessage);
+        CAppStateManager::SetActiveAppState(APPSTATE_END);
+    } else if (Archer.Dead) {
+
+        WinMessage.boolMessage = true;
+        CAppStateManager::SendMessage(APPSTATE_END,WinMessage);
+        CAppStateManager::SetActiveAppState(APPSTATE_END);
+    }
+
         for(std::vector<CEntity*>::iterator it = CEntity::EntityList.begin(); it != CEntity::EntityList.end();) {
         if(!(*it)) continue;
         if((*it)->Dead == true) {
@@ -180,9 +186,9 @@ void CAppStateGame::OnLoop() {
         }
     }
 
-    char Buffer[255];
-    sprintf(Buffer,"Player Health: %d  |||  Enemy Health: %d", Player.Health, Archer.Health);
-    SDL_WM_SetCaption(Buffer,Buffer);
+    //char Buffer[255];
+    //sprintf(Buffer,"Player Health: %d  |||  Enemy Health: %d ||| Player Y: %f", Player.Health, Archer.Health, Player.Y);
+    //SDL_WM_SetCaption(Buffer,Buffer);
 }
 
 void CAppStateGame::OnRender(SDL_Surface* Surf_Display) {
@@ -209,4 +215,7 @@ CAppStateGame* CAppStateGame::GetInstance() {
 
 CPlayer CAppStateGame::GetPlayer() {
     return Player;
+}
+
+void CAppStateGame::OnReceiveMessage(CAppStateMessage Message) {
 }

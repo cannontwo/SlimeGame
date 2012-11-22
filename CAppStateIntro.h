@@ -3,6 +3,7 @@
 
 #include "CAppState.h"
 #include "CSurface.h"
+#include "CAppStateMessage.h"
 
 class CAppStateIntro : public CAppState {
     private:
@@ -23,6 +24,8 @@ class CAppStateIntro : public CAppState {
         void OnLoop();
 
         void OnRender(SDL_Surface* Surf_Display);
+
+        void OnReceiveMessage(CAppStateMessage Message);
 
     public:
         static CAppStateIntro* GetInstance();

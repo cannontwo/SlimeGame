@@ -1,6 +1,7 @@
 #ifndef __CAPPSTATEEND_H__
     #define __CAPPSTATEEND_H__
 
+#include <vector>
 #include "CAppState.h"
 
 #include "CArea.h"
@@ -12,6 +13,8 @@
 
 
 class CAppStateEnd : public CAppState {
+    static std::vector<CAppStateMessage*> MessageList;
+
     private:
         static CAppStateEnd Instance;
 
@@ -35,6 +38,8 @@ class CAppStateEnd : public CAppState {
         static CAppStateEnd* GetInstance();
 
         void OnLButtonDown(int mX, int mY);
+
+        void OnReceiveMessage(CAppStateMessage Message);
 };
 
 #endif

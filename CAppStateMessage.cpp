@@ -1,11 +1,24 @@
 #include "CAppStateMessage.h"
 
-
-CAppStateMessage::CAppStateMessage(Type message) {
-    contents = message;
+CAppStateMessage::CAppStateMessage() {
 }
 
+CAppStateMessage::CAppStateMessage(int message) {
+    intMessage = message;
+}
 
-Type CAppStateMessage::GetMessage() {
-    return message;
+CAppStateMessage::CAppStateMessage(bool message) {
+    boolMessage = message;
+}
+
+CAppStateMessage::CAppStateMessage(char* message) {
+    stringMessage = message;
+}
+
+void CAppStateMessage::SetType(int Type) {
+    TargetState = Type;
+}
+
+int CAppStateMessage::GetType() {
+    return TargetState;
 }

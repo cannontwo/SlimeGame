@@ -31,9 +31,20 @@ void CAppStateManager::SetActiveAppState(int AppStateID) {
     if(AppStateID == APPSTATE_MENU)        ActiveAppState = CAppStateMenu::GetInstance();
     if(AppStateID == APPSTATE_END)         ActiveAppState = CAppStateEnd::GetInstance();
 
+    for(int i = 0; i < MessageList.size(); i++) {
+        if(AppStateID == MessageList[i]->GetType()) {
+            ActiveAppState->OnReceiveMessage(MessageList[i]);
+        }
+    }
+
     if(ActiveAppState) ActiveAppState->OnActivate();
 }
 
 CAppState* CAppStateManager::GetActiveAppState() {
     return ActiveAppState;
+}
+
+void CAppStateManager::SendMessage(int AppStateID, CAppStateMessage Message) {
+    Message.SetType(AppStateID);
+    MessageList.push_back(&Message);
 }

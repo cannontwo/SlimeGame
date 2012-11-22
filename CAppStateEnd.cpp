@@ -4,15 +4,23 @@
 
 CAppStateEnd CAppStateEnd::Instance;
 
+std::vector<CAppStateMessage*> CAppStateEnd::MessageList;
+
 CAppStateEnd::CAppStateEnd() {
     Surf_End = NULL;
 }
 
 void CAppStateEnd::OnActivate() {
-    if (Win) {
-        Surf_End = CSurface::OnLoad("win.png");
-    } else {
-        Surf_End = CSurface::OnLoad("lose.png");
+     for(int i = 0; i < MessageList.size(); i++) {
+        char Buffer[255];
+        sprintf(Buffer,"Player Health: %d", MessageList.size());
+        SDL_WM_SetCaption(Buffer,Buffer);
+
+        if(MessageList[i]->boolMessage == true) {
+            Surf_End = CSurface::OnLoad("images/win.png");
+        } else if(MessageList[i]->boolMessage == false) {
+            Surf_End = CSurface::OnLoad("images/lose.png");
+        }
     }
 }
 
@@ -37,4 +45,8 @@ CAppStateEnd* CAppStateEnd::GetInstance() {
 
 void CAppStateEnd::OnLButtonDown(int mX, int mY) {
     SDL_Quit();
+}
+
+void CAppStateEnd::OnReceiveMessage(CAppStateMessage Message) {
+    MessageList.push_back(&Message);
 }

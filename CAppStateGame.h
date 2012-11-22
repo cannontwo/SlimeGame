@@ -25,8 +25,11 @@ class CAppStateGame : public CAppState {
 
         bool FirstTime;
 
+        CAppStateMessage WinMessage;
+
     private:
         CAppStateGame();
+
 
     public:
         void OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode);
@@ -45,6 +48,8 @@ class CAppStateGame : public CAppState {
         void OnLoop();
 
         void OnRender(SDL_Surface* Surf_Display);
+
+        void OnReceiveMessage(CAppStateMessage Message);
 
         CPlayer GetPlayer();
 

@@ -4,6 +4,8 @@
 #include "CAppState.h"
 #include "CSurface.h"
 
+#include "CAppStateMessage.h"
+
 class CAppStateMenu : public CAppState {
     private:
         static CAppStateMenu Instance;
@@ -33,6 +35,8 @@ class CAppStateMenu : public CAppState {
         void OnLoop();
 
         void OnRender(SDL_Surface* Surf_Display);
+
+        void OnReceiveMessage(CAppStateMessage Message);
 
     public:
         static CAppStateMenu* GetInstance();

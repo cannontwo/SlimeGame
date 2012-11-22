@@ -10,7 +10,7 @@ CAppStateIntro::CAppStateIntro() {
 
 void CAppStateIntro::OnActivate() {
     // Load Simple Logo
-    Surf_Logo = CSurface::OnLoad("splash.png");
+    Surf_Logo = CSurface::OnLoad("images/splash.png");
 
     StartTime = SDL_GetTicks();
 }
@@ -35,4 +35,7 @@ void CAppStateIntro::OnRender(SDL_Surface* Surf_Display) {
 
 CAppStateIntro* CAppStateIntro::GetInstance() {
     return &Instance;
+}
+
+void CAppStateIntro::OnReceiveMessage(CAppStateMessage Message) {
 }

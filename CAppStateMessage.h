@@ -1,15 +1,24 @@
 #ifndef __CAPPSTATEMESSAGE_H__
     #define __CAPPSTATEMESSAGE_H__
 
-template <class Type>
 class CAppStateMessage {
     public:
-        CAppStateMessage(Type message);
+        CAppStateMessage();
+        CAppStateMessage(bool message);
+        CAppStateMessage(char* message);
+        CAppStateMessage(int message);
 
-        Type GetMessage();
+        void SetType(int Type);
+
+        int GetType();
+
+    public:
+        bool boolMessage;
+        char* stringMessage;
+        int intMessage;
 
     private:
-        Type contents;
+        int TargetState;
 };
 
 #endif

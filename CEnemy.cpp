@@ -1,10 +1,11 @@
 #include "CEnemy.h"
 
 CEnemy::CEnemy() {
-    Health = 40;
+    Health = 100;
     Attack = 10;
     Type = ENTITY_TYPE_ENEMY;
     StartTime = 0;
+    Dead = false;
 }
 
 bool CEnemy::OnLoad(char* File, int Width, int Height, int MaxFrames) {

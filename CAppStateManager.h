@@ -2,6 +2,8 @@
     #define __CAPPSTATEMANAGER_H__
 
 #include "CAppState.h"
+#include <vector>
+#include "CAppStateMessage.h"
 
 enum {
     // Add your Other App States Here
@@ -14,6 +16,9 @@ enum {
 };
 
 class CAppStateManager {
+    public:
+        static std::vector<CAppStateMessage*>    MessageList;
+
     private:
         static CAppState* ActiveAppState;
 
@@ -29,6 +34,8 @@ class CAppStateManager {
         static void SetActiveAppState(int AppStateID);
 
         static CAppState* GetActiveAppState();
+
+        static void SendMessage(int AppStateID, CAppStateMessage Message);
 };
 
 #endif

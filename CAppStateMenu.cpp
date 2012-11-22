@@ -14,11 +14,11 @@ CAppStateMenu::CAppStateMenu() {
 }
 
 void CAppStateMenu::OnActivate() {
-    Surf_Transition = CSurface::OnLoad("transition.png");
-    Surf_QuitButton = CSurface::OnLoad("quit_button.png");
-    Surf_ResumeButton = CSurface::OnLoad("resume_button.png");
-    Surf_OptionsButton = CSurface::OnLoad("options_button.png");
-    Surf_MenuButton = CSurface::OnLoad("menu_button.png");
+    Surf_Transition = CSurface::OnLoad("images/transition.png");
+    Surf_QuitButton = CSurface::OnLoad("images/quit_button.png");
+    Surf_ResumeButton = CSurface::OnLoad("images/resume_button.png");
+    Surf_OptionsButton = CSurface::OnLoad("images/options_button.png");
+    Surf_MenuButton = CSurface::OnLoad("images/menu_button.png");
 }
 
 void CAppStateMenu::OnDeactivate() {
@@ -80,4 +80,7 @@ bool CAppStateMenu::LButtonDownCheck(int mX, int mY, SDL_Surface* Surf_Button,in
             return false;
         }
         return false;
+}
+
+void CAppStateMenu::OnReceiveMessage(CAppStateMessage Message) {
 }

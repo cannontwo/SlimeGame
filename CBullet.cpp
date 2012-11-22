@@ -20,7 +20,7 @@ CBullet::CBullet() {
 }
 
 CBullet::CBullet(CVector position, CVector speed, CVector acceleration, CVector direction) {
-    OnLoad(("bullet.png"),16,16,0);
+    OnLoad(("./images/bullet.png"),16,16,0);
 
     Attack = 10;
 
