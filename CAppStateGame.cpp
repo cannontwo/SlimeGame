@@ -185,12 +185,16 @@ void CAppStateGame::OnLoop() {
         CAppStateManager::SendMessage(APPSTATE_END, &WinMessage);
         CAppStateManager::SetActiveAppState(APPSTATE_END);
     }
-//    if (Archer.Dead) {
-//        WinMessage.boolMessage = true;
-//        CAppStateManager::SendMessage(APPSTATE_END,&WinMessage);
-//        CAppStateManager::SetActiveAppState(APPSTATE_END);
-//    }
-
+ //   if (Archer.Dead) {
+ //      WinMessage.boolMessage = true;
+ //       CAppStateManager::SendMessage(APPSTATE_END,&WinMessage);
+ //       CAppStateManager::SetActiveAppState(APPSTATE_END);
+ //   }
+    if(Player.Money > 0) {
+        WinMessage.boolMessage = true;
+        CAppStateManager::SendMessage(APPSTATE_END,&WinMessage);
+        CAppStateManager::SetActiveAppState(APPSTATE_END);
+    }
         for(std::vector<CEntity*>::iterator it = CEntity::EntityList.begin(); it != CEntity::EntityList.end();) {
         if(!(*it)) continue;
         if((*it)->Dead == true) {
