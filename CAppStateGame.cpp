@@ -14,11 +14,13 @@ CAppStateGame::CAppStateGame() {
 void CAppStateGame::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode) {
     switch(sym) {
         case SDLK_LEFT: {
+            Player.MoveRight = false;
             Player.MoveLeft = true;
             break;
         }
 
         case SDLK_RIGHT: {
+            Player.MoveLeft = false;
             Player.MoveRight = true;
             break;
         }
@@ -39,11 +41,13 @@ void CAppStateGame::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode) {
         }
 
         case SDLK_a: {
+            Player.MoveRight = false;
             Player.MoveLeft = true;
             break;
         }
 
         case SDLK_d: {
+            Player.MoveLeft = false;
             Player.MoveRight = true;
             break;
         }
@@ -104,13 +108,26 @@ void CAppStateGame::OnActivate() {
     if(Archer.OnLoad("./images/archer.png",64,64,1) == false) {
         return;
     }
+
     if (FirstTime) {
         Player.Y = (MAP_HEIGHT - 10) * TILE_SIZE;
         FirstTime = false;
+        Player.X = rand() % 1184 + 32;
+        Archer.X = rand() % 1184 + 32;
     }
 
-    Player.X = 100;
-    Archer.X = 500;
+    if(Archer.Dead || Player.Dead) {
+        FirstTime = true;
+        Archer.Dead = false;
+        Player.Dead = false;
+        Archer.Health = 100;
+        Player.Health = 100;
+        Player.MoveLeft = Player.MoveRight = false;
+    }
+    if (FirstTime) {
+        Player.X = rand() % 1216 + 32;
+        Archer.X = rand() % 1216 + 32;
+    }
 
     Archer.SetPlayer(Player);
 
@@ -165,14 +182,14 @@ void CAppStateGame::OnLoop() {
 
     if (Player.Dead) {
         WinMessage.boolMessage = false;
-        CAppStateManager::SendMessage(APPSTATE_END,WinMessage);
-        CAppStateManager::SetActiveAppState(APPSTATE_END);
-    } else if (Archer.Dead) {
-
-        WinMessage.boolMessage = true;
-        CAppStateManager::SendMessage(APPSTATE_END,WinMessage);
+        CAppStateManager::SendMessage(APPSTATE_END, &WinMessage);
         CAppStateManager::SetActiveAppState(APPSTATE_END);
     }
+//    if (Archer.Dead) {
+//        WinMessage.boolMessage = true;
+//        CAppStateManager::SendMessage(APPSTATE_END,&WinMessage);
+//        CAppStateManager::SetActiveAppState(APPSTATE_END);
+//    }
 
         for(std::vector<CEntity*>::iterator it = CEntity::EntityList.begin(); it != CEntity::EntityList.end();) {
         if(!(*it)) continue;
@@ -186,9 +203,9 @@ void CAppStateGame::OnLoop() {
         }
     }
 
-    //char Buffer[255];
-    //sprintf(Buffer,"Player Health: %d  |||  Enemy Health: %d ||| Player Y: %f", Player.Health, Archer.Health, Player.Y);
-    //SDL_WM_SetCaption(Buffer,Buffer);
+    char Buffer[255];
+    sprintf(Buffer,"Player Health: %d  |||  Enemy Health: %d ||| Money: %d", Player.Health, Archer.Health, Player.Money);
+    SDL_WM_SetCaption(Buffer,Buffer);
 }
 
 void CAppStateGame::OnRender(SDL_Surface* Surf_Display) {
@@ -217,5 +234,5 @@ CPlayer CAppStateGame::GetPlayer() {
     return Player;
 }
 
-void CAppStateGame::OnReceiveMessage(CAppStateMessage Message) {
+void CAppStateGame::OnReceiveMessage(CAppStateMessage* Message) {
 }

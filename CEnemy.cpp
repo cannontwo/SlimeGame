@@ -24,6 +24,9 @@ void CEnemy::OnRender(SDL_Surface* Surf_Display) {
 }
 
 void CEnemy::OnCleanup() {
+    CVector position (X + (Width / 2), Y + (Height / 2));
+    myCoin = new Coin(position);
+    EntityList.push_back(myCoin);
     CEntity::OnCleanup();
 }
 

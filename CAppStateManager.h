@@ -11,7 +11,8 @@ enum {
     APPSTATE_NONE,
     APPSTATE_INTRO,
     APPSTATE_GAME,
-    APPSTATE_END
+    APPSTATE_END,
+    APPSTATE_MAINMENU
 
 };
 
@@ -35,7 +36,7 @@ class CAppStateManager {
 
         static CAppState* GetActiveAppState();
 
-        static void SendMessage(int AppStateID, CAppStateMessage Message);
+        static void SendMessage(int AppStateID, CAppStateMessage* Message);
 };
 
 #endif

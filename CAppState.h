@@ -18,7 +18,7 @@ class CAppState : public CEvent {
 
         virtual void OnRender(SDL_Surface* Surf_Display) = 0;
 
-        virtual void OnReceiveMessage(CAppStateMessage Message) = 0;
+        virtual void OnReceiveMessage(CAppStateMessage* Message) = 0;
 };
 
 #endif

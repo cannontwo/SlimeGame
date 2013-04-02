@@ -18,7 +18,9 @@ enum {
 
     ENTITY_TYPE_PLAYER,
 
-    ENTITY_TYPE_ENEMY
+    ENTITY_TYPE_ENEMY,
+
+    ENTITY_TYPE_MONEY
 };
 
 enum {

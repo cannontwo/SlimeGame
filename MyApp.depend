@@ -44,7 +44,7 @@
 1352599807 c:\users\cannon\code\sdlprojects\myapp\canimation.h
 	<SDL.h>
 
-1353526631 c:\users\cannon\code\sdlprojects\myapp\centity.h
+1361727193 c:\users\cannon\code\sdlprojects\myapp\centity.h
 	<vector>
 	"CArea.h"
 	"CAnimation.h"
@@ -310,14 +310,14 @@
 	"begin_code.h"
 	"close_code.h"
 
-1353528646 c:\users\cannon\code\sdlprojects\myapp\cplayer.h
+1361727101 c:\users\cannon\code\sdlprojects\myapp\cplayer.h
 	"CEntity.h"
 	"CBullet.h"
 
 1352769008 c:\users\cannon\code\sdlprojects\myapp\cfps.h
 	<SDL.h>
 
-1353563198 source:c:\users\cannon\code\sdlprojects\myapp\cplayer.cpp
+1361727206 source:c:\users\cannon\code\sdlprojects\myapp\cplayer.cpp
 	"CPlayer.h"
 
 1352770041 source:c:\users\cannon\code\sdlprojects\myapp\cfps.cpp
@@ -326,12 +326,12 @@
 1352770714 source:c:\users\cannon\code\sdlprojects\myapp\centitycol.cpp
 	"CEntity.h"
 
-1353565827 c:\users\cannon\code\sdlprojects\myapp\cappstatemanager.h
+1353624364 c:\users\cannon\code\sdlprojects\myapp\cappstatemanager.h
 	"CAppState.h"
 	<vector>
 	"CAppStateMessage.h"
 
-1353556866 c:\users\cannon\code\sdlprojects\myapp\cappstate.h
+1353597229 c:\users\cannon\code\sdlprojects\myapp\cappstate.h
 	"CEvent.h"
 	"Define.h"
 	"CAppStateMessage.h"
@@ -339,11 +339,11 @@
 1353137833 source:c:\users\cannon\code\sdlprojects\myapp\cappstate.cpp
 	"CAppState.h"
 
-1353566493 source:c:\users\cannon\code\sdlprojects\myapp\cappstategame.cpp
+1361727388 source:c:\users\cannon\code\sdlprojects\myapp\cappstategame.cpp
 	"CAppStateGame.h"
 	"CAppStateMessage.h"
 
-1353565188 c:\users\cannon\code\sdlprojects\myapp\cappstategame.h
+1353597255 c:\users\cannon\code\sdlprojects\myapp\cappstategame.h
 	"CAppState.h"
 	"CArea.h"
 	"CCamera.h"
@@ -355,28 +355,29 @@
 	"CEnemy.h"
 	"CAppStateMessage.h"
 
-1353557013 source:c:\users\cannon\code\sdlprojects\myapp\cappstateintro.cpp
+1353629134 source:c:\users\cannon\code\sdlprojects\myapp\cappstateintro.cpp
 	"CAppStateIntro.h"
 	"CAppStateManager.h"
 
-1353556987 c:\users\cannon\code\sdlprojects\myapp\cappstateintro.h
+1353624224 c:\users\cannon\code\sdlprojects\myapp\cappstateintro.h
 	"CAppState.h"
 	"CSurface.h"
 	"CAppStateMessage.h"
 
-1353565813 source:c:\users\cannon\code\sdlprojects\myapp\cappstatemanager.cpp
+1353624418 source:c:\users\cannon\code\sdlprojects\myapp\cappstatemanager.cpp
 	"CAppStateManager.h"
 	"CAppStateMenu.h"
 	"CAppStateIntro.h"
 	"CAppStateGame.h"
 	"CAppStateEnd.h"
+	"CAppStateMainMenu.h"
 
-1353557044 c:\users\cannon\code\sdlprojects\myapp\cappstatemenu.h
+1353597273 c:\users\cannon\code\sdlprojects\myapp\cappstatemenu.h
 	"CAppState.h"
 	"CSurface.h"
 	"CAppStateMessage.h"
 
-1353557033 source:c:\users\cannon\code\sdlprojects\myapp\cappstatemenu.cpp
+1353632531 source:c:\users\cannon\code\sdlprojects\myapp\cappstatemenu.cpp
 	"CAppStateMenu.h"
 	"CAppStateManager.h"
 
@@ -399,22 +400,23 @@
 1353385577 source:c:\users\cannon\code\sdlprojects\myapp\cvector.cpp
 	"CVector.h"
 
-1353527361 c:\users\cannon\code\sdlprojects\myapp\cenemy.h
+1361727602 c:\users\cannon\code\sdlprojects\myapp\cenemy.h
 	<vector>
 	"CEntity.h"
 	"CBullet.h"
+	"Coin.h"
 	"CPlayer.h"
 
-1353563181 source:c:\users\cannon\code\sdlprojects\myapp\cenemy.cpp
+1361727548 source:c:\users\cannon\code\sdlprojects\myapp\cenemy.cpp
 	"CEnemy.h"
 
-1353516358 source:c:\users\cannon\code\sdlprojects\myapp\resources.rc
+1353609481 source:c:\users\cannon\code\sdlprojects\myapp\resources.rc
 
-1353566673 source:c:\users\cannon\code\sdlprojects\myapp\cappstateend.cpp
+1353633528 source:c:\users\cannon\code\sdlprojects\myapp\cappstateend.cpp
 	"CAppStateEnd.h"
 	"CAppStateManager.h"
 
-1353566237 c:\users\cannon\code\sdlprojects\myapp\cappstateend.h
+1353632555 c:\users\cannon\code\sdlprojects\myapp\cappstateend.h
 	<vector>
 	"CAppState.h"
 	"CArea.h"
@@ -427,4 +429,17 @@
 
 1353565242 source:c:\users\cannon\code\sdlprojects\myapp\cappstatemessage.cpp
 	"CAppStateMessage.h"
+
+1353631145 c:\users\cannon\code\sdlprojects\myapp\cappstatemainmenu.h
+	"CAppState.h"
+	"CSurface.h"
+	"CAppStateMessage.h"
+
+1353632340 source:c:\users\cannon\code\sdlprojects\myapp\cappstatemainmenu.cpp
+	"CAppStateMainMenu.h"
+	"CAppStateManager.h"
+
+1361726837 c:\users\cannon\code\sdlprojects\myapp\coin.h
+	"CEntity.h"
+	"CVector.h"
 

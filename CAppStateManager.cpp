@@ -5,6 +5,7 @@
 #include "CAppStateIntro.h"
 #include "CAppStateGame.h"
 #include "CAppStateEnd.h"
+#include "CAppStateMainMenu.h"
 
 
 CAppState* CAppStateManager::ActiveAppState = 0;
@@ -30,6 +31,7 @@ void CAppStateManager::SetActiveAppState(int AppStateID) {
     if(AppStateID == APPSTATE_GAME)        ActiveAppState = CAppStateGame::GetInstance();
     if(AppStateID == APPSTATE_MENU)        ActiveAppState = CAppStateMenu::GetInstance();
     if(AppStateID == APPSTATE_END)         ActiveAppState = CAppStateEnd::GetInstance();
+    if(AppStateID == APPSTATE_MAINMENU)    ActiveAppState = CAppStateMainMenu::GetInstance();
 
     for(int i = 0; i < MessageList.size(); i++) {
         if(AppStateID == MessageList[i]->GetType()) {
@@ -44,7 +46,7 @@ CAppState* CAppStateManager::GetActiveAppState() {
     return ActiveAppState;
 }
 
-void CAppStateManager::SendMessage(int AppStateID, CAppStateMessage Message) {
-    Message.SetType(AppStateID);
-    MessageList.push_back(&Message);
+void CAppStateManager::SendMessage(int AppStateID, CAppStateMessage* Message) {
+    Message->SetType(AppStateID);
+    MessageList.push_back(Message);
 }

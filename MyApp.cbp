@@ -56,6 +56,8 @@
 		<Unit filename="CAppStateGame.h" />
 		<Unit filename="CAppStateIntro.cpp" />
 		<Unit filename="CAppStateIntro.h" />
+		<Unit filename="CAppStateMainMenu.cpp" />
+		<Unit filename="CAppStateMainMenu.h" />
 		<Unit filename="CAppStateManager.cpp" />
 		<Unit filename="CAppStateManager.h" />
 		<Unit filename="CAppStateMenu.cpp" />
@@ -92,6 +94,8 @@
 		<Unit filename="CTile.h" />
 		<Unit filename="CVector.cpp" />
 		<Unit filename="CVector.h" />
+		<Unit filename="Coin.cpp" />
+		<Unit filename="Coin.h" />
 		<Unit filename="Define.h" />
 		<Unit filename="resources.rc">
 			<Option compilerVar="WINDRES" />

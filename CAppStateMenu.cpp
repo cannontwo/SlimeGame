@@ -22,7 +22,7 @@ void CAppStateMenu::OnActivate() {
 }
 
 void CAppStateMenu::OnDeactivate() {
-    if(Surf_QuitButton) {
+    if(Surf_Transition) {
         SDL_FreeSurface(Surf_Transition);
     }
 }
@@ -63,6 +63,7 @@ void CAppStateMenu::OnLButtonDown(int mX, int mY) {
         if(LButtonDownCheck(mX,mY,Surf_OptionsButton, (WWIDTH / 2) - (Surf_OptionsButton->w / 2), (WHEIGHT / 2))) {
         }
         if(LButtonDownCheck(mX,mY,Surf_MenuButton, (WWIDTH / 2) - (Surf_MenuButton->w / 2), (WHEIGHT / 2) + (Surf_MenuButton->h))) {
+            CAppStateManager::SetActiveAppState(APPSTATE_MAINMENU);
         }
 }
 
@@ -82,5 +83,5 @@ bool CAppStateMenu::LButtonDownCheck(int mX, int mY, SDL_Surface* Surf_Button,in
         return false;
 }
 
-void CAppStateMenu::OnReceiveMessage(CAppStateMessage Message) {
+void CAppStateMenu::OnReceiveMessage(CAppStateMessage* Message) {
 }

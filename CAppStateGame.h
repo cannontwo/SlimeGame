@@ -49,7 +49,7 @@ class CAppStateGame : public CAppState {
 
         void OnRender(SDL_Surface* Surf_Display);
 
-        void OnReceiveMessage(CAppStateMessage Message);
+        void OnReceiveMessage(CAppStateMessage* Message);
 
         CPlayer GetPlayer();
 

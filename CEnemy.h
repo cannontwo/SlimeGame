@@ -6,6 +6,7 @@
 
 #include "CEntity.h"
 #include "CBullet.h"
+#include "Coin.h"
 
 #include "CPlayer.h"
 
@@ -32,6 +33,8 @@ class CEnemy : public CEntity {
 
     private:
         CBullet* Bullet;
+
+        Coin* myCoin;
 
         CPlayer* Target;
 

@@ -27,6 +27,7 @@ class CPlayer : public CEntity {
         CBullet* Bullet;
 
         int HitTimes;
+        int Money;
 
         CEntity* NewColEntity;
         CEntity* OldColEntity;

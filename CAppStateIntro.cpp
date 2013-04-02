@@ -23,7 +23,7 @@ void CAppStateIntro::OnDeactivate() {
 
 void CAppStateIntro::OnLoop() {
     if(StartTime + 3000 < SDL_GetTicks()) {
-        CAppStateManager::SetActiveAppState(APPSTATE_GAME);
+        CAppStateManager::SetActiveAppState(APPSTATE_MAINMENU);
     }
 }
 
@@ -37,5 +37,9 @@ CAppStateIntro* CAppStateIntro::GetInstance() {
     return &Instance;
 }
 
-void CAppStateIntro::OnReceiveMessage(CAppStateMessage Message) {
+void CAppStateIntro::OnReceiveMessage(CAppStateMessage* Message) {
+}
+
+void CAppStateIntro::OnLButtonDown(int mX, int mY) {
+    CAppStateManager::SetActiveAppState(APPSTATE_MAINMENU);
 }

@@ -40,6 +40,8 @@ bool CPlayer::OnCollision(CEntity* Entity) {
     if(Entity->Type == ENTITY_TYPE_PROJECTILE_ENEMY) {
         Health -= Entity->Attack;
         HitTimes++;
+    } else if(Entity->Type == ENTITY_TYPE_MONEY) {
+        Money++;
     }
 }
 

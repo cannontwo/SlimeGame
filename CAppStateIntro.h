@@ -25,10 +25,12 @@ class CAppStateIntro : public CAppState {
 
         void OnRender(SDL_Surface* Surf_Display);
 
-        void OnReceiveMessage(CAppStateMessage Message);
+        void OnReceiveMessage(CAppStateMessage* Message);
 
     public:
         static CAppStateIntro* GetInstance();
+
+        void OnLButtonDown(int mX, int mY);
 };
 
 #endif

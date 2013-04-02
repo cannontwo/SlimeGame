@@ -22,8 +22,20 @@ class CAppStateEnd : public CAppState {
 
         SDL_Surface* Surf_End;
 
+        SDL_Surface* Surf_Back;
+
+        SDL_Surface* Surf_QuitButton;
+
+        SDL_Surface* Surf_RestartButton;
+
+        SDL_Surface* Surf_Message;
+
+        SDL_Surface* Surf_MenuButton;
+
     private:
         CAppStateEnd();
+
+        bool LButtonDownCheck(int mX, int mY, SDL_Surface* Surf_Button, int x, int y);
 
     public:
         void OnActivate();
@@ -39,7 +51,7 @@ class CAppStateEnd : public CAppState {
 
         void OnLButtonDown(int mX, int mY);
 
-        void OnReceiveMessage(CAppStateMessage Message);
+        void OnReceiveMessage(CAppStateMessage* Message);
 };
 
 #endif
